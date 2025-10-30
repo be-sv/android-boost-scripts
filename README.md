@@ -1,22 +1,19 @@
-# Android Boost Scripts (ColorOS / Oppo A76 friendly)
+# Android Boost Scripts by be-sv
 
-Kumpulan skrip ADB/LADB untuk bikin Android lebih ringan, smooth (feel 144Hz), dan hemat baterai—tanpa root & tanpa PC.
-Dites di **OPPO A76 (CPH2375, ColorOS 12/13)**, harusnya juga aman di seri OPPO/Realme lain (uji sendiri pelan-pelan).
+Kumpulan script ADB/LADB untuk membuat Android lebih ringan, smooth (feel 144 Hz), dan hemat baterai — tanpa root & tanpa PC.  
+Dites di **OPPO A76 (ColorOS 12/13)** dan aman untuk seri OPPO/Realme lain (uji pelan-pelan dulu).
 
-> ⚠️ Disclaimer: Pakai tanggung jawab sendiri. Beberapa fitur pabrikan (analitik/AI/cleaner) memang sengaja dimatikan.
+## 📂 Isi
+- `scripts/booster_script.sh` — mode **Smooth & Stabil**.
+- `scripts/reset_defaults.sh` — untuk **balik ke bawaan**.
 
-## Isi
-- `scripts/kiki_booster_script.sh` — profil **Smooth & Stabil** (daily use).
-- `scripts/kiki_reset_defaults.sh` — balikin ke **default** kalau mau undo.
-
-## Cara pakai (tanpa PC)
-### A. LADB (paling gampang)
-1. Pair LADB → buka **adb shell**.
-2. Buka `scripts/kiki_booster_script.sh`, salin isinya → tempel di LADB → Enter.
+## ⚙️ Cara pakai
+1. Pair LADB → buka **adb shell**.  
+2. Salin isi dari `scripts/booster_script.sh` → tempel di LADB → Enter.  
 3. Restart ponsel.
 
-### B. Termux (opsional)
-1. Simpan file `.sh` ke memori internal (mis. `Download/`).
-2. Buka Termux:
-   ```bash
-   sh /sdcard/Download/kiki_booster_script.sh
+## ✅ Verifikasi
+```bash
+settings get global window_animation_scale   # 0.25
+settings get system peak_refresh_rate        # 90.0
+settings get system min_refresh_rate         # 90.0
